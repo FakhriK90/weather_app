@@ -33,22 +33,22 @@ const Weather = () => {
         <div>
             {loading?<h3>loading...</h3>:<div>
             <input
+            style={{margin:20}}
             type="text"
             onChange={(e) => setQuery(e.target.value)}></input>
             <Card className={classes.root} 
-            style={{display:"flex", justifyContent:"center",margin:"auto", opacity:"0.4"}}>
-      <CardActionArea>
+            style={{display:"flex", justifyContent:"center",margin:"auto", opacity:"0.5"}}>
+      <CardActionArea className="card">
       <img className={classes.media} src={weathers.current&&weathers.current.condition.icon} alt=""/>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          {weathers.current&&weathers.current.condition.text}
-          <br/>
-          {weathers.current&&weathers.current.temp_c}
+          <h4 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.condition.text}</h4>
+          <h4 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.temp_c}</h4>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          <h1>{weathers.location&&weathers.location.name}</h1>
-                <h1>{weathers.location&&weathers.location.country}</h1>
-                <h2>{weathers.current&&weathers.current.last_updated}</h2>
+          <h2 style={{color:"aliceblue"}}>{weathers.location&&weathers.location.name}</h2>
+                <h2 style={{color:"aliceblue"}}>{weathers.location&&weathers.location.country}</h2>
+                <h5 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.last_updated}</h5>
           </Typography>
         </CardContent>
       </CardActionArea>
