@@ -43,7 +43,7 @@ const Weather = () => {
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
           <h4 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.condition.text}</h4>
-          <h4 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.temp_c}</h4>
+          <h4 style={{color:"aliceblue"}}>{weathers.current&&weathers.current.temp_c} °C</h4>
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
           <h2 style={{color:"aliceblue"}}>{weathers.location&&weathers.location.name}</h2>

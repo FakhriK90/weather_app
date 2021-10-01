@@ -6,8 +6,11 @@
 
 body{
   background-image: url(
-    https://images.unsplash.com/photo-1630348727758-240aea8f99fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80
+    https://images.unsplash.com/photo-1630348727758-240aea8f99fe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80;
   );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .App {
   text-align: center;
@@ -18,4 +21,46 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.flip-card {
+  background: url("https://images.unsplash.com/photo-1622798471684-f5e15aa1d910?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 0px 10px;
+  opacity: 0.4;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  transform: rotateY(180deg);
 }
